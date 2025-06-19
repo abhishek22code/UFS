@@ -1,0 +1,148 @@
+.dashboard {
+  padding: 2rem;
+  color: #fff;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logoutBtn {
+  padding: 0.5rem 1rem;
+  background-color: #ef4444;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnToggle {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnToggle span {
+  position: relative;
+  z-index: 2;
+}
+
+.btnToggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.btnToggle:hover::before {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stats {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.filterActions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.feedbackList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start; /* Align items to the left */
+  transition: all 0.3s ease;
+}
+
+.feedbackItem {
+  flex: 0 1 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+/* Hover: subtle glow + scale */
+.feedbackItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Shrink others when one is hovered */
+.feedbackList:hover .feedbackItem:not(:hover) {
+  transform: scale(0.95);
+  opacity: 0.85;
+}
+
+.chartsContainer {
+  display: flex;
+  justify-content: center; /* Align horizontally */
+  align-items: flex-start; /* Align top-aligned */
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Optional: allow wrapping on small screens */
+}
+
+
+.chartBox {
+  flex: 0 1 320px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.chartBox:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
