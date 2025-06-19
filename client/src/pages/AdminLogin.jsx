@@ -13,7 +13,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/login", formData);
+      const res = await axios.post("https://ufs-backend.onrender.com/api/admin/login", formData);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", "admin");
       navigate("/admin/dashboard");
