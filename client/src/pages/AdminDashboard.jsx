@@ -8,7 +8,7 @@ import {
   PieChart, Pie, Cell
 } from "recharts";
 
-const socket = io("http://localhost:5000", {
+const socket = io("https://ufs-backend.onrender.com", {
   transports: ["websocket"],
   withCredentials: true,
 });
@@ -54,7 +54,7 @@ const AdminDashboard = () => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/feedback/all", {
+        const res = await axios.get("https://ufs-backend.onrender.com/api/feedback/all", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFeedbacks(res.data.feedbacks);
