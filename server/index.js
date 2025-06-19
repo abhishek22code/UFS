@@ -13,7 +13,7 @@ const server = http.createServer(app);
 // Enhanced Socket.IO configuration
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:3000',
+    origin: process.env.CLIENT_URL || 'https://ufs-backend.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
   },
