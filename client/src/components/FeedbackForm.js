@@ -23,7 +23,7 @@ function FeedbackForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/feedback", formData);
+      await axios.post("https://ufs-backend.onrender.com/api/feedback", formData);
       setSuccess("Have a Good Day");
       setShowModal(true);
       setFormData({ name: "", email: "", message: "", rating: 5, product: "" });
