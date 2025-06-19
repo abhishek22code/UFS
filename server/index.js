@@ -28,7 +28,7 @@ app.set('io', io);
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: process.env.CLIENT_URL || 'https://ufs-backend.onrender.com',
   credentials: true
 }));
 app.use(express.json());
@@ -84,7 +84,7 @@ app.get('/health', (req, res) => {
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🔌 WebSocket available at ${process.env.CLIENT_URL || 'http://localhost:3000'}`);
+  console.log(`🔌 WebSocket available at ${process.env.CLIENT_URL || 'https://ufs-backend.onrender.com'}`);
 });
 
 // Handle unhandled rejections
